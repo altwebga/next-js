@@ -2,9 +2,9 @@
   "name": "portfolio",
   "version": "1.0.0",
   "homepage": "https://seomix.ru",
-  "description": "Portfolio site for Константин Кузнецов",
+  "description": "Портфолио Кузнецова Константина",
   "repository": "https://github.com",
-  "author": "Константин Кузнецов <hello@hamishw.com>",
+  "author": "Константин Кузнецов <info@webga.ru>",
   "devDependencies": {
     "@mapbox/rehype-prism": "^0.8.0",
     "@svgr/webpack": "^6.3.1",
