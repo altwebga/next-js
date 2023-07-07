@@ -42,6 +42,7 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build && next export -o build/",
+    "deploy": "scp -r build/ root@62.113.96.242:/var/www/portfolio/",
     "start": "next start",
     "test": "echo 'write some tests'"
   },
