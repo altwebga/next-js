@@ -13,6 +13,7 @@ import { Transition } from 'components/Transition';
 import { useFormInput } from 'hooks';
 import { useRef, useState } from 'react';
 import { cssProps, msToNum, numToMs } from 'utils/style';
+import ReCAPTCHA from 'react-google-recaptcha';
 import styles from './Contact.module.css';
 
 export const Contact = () => {
@@ -24,11 +25,14 @@ export const Contact = () => {
   const [statusError, setStatusError] = useState('');
   const initDelay = tokens.base.durationS;
 
+  // Добавьте состояние для хранения значения reCAPTCHA
+  const [recaptchaValue, setRecaptchaValue] = useState(null);
+
   const onSubmit = async event => {
     event.preventDefault();
     setStatusError('');
 
-    if (sending) return;
+    if (sending || !recaptchaValue) return;
 
     try {
       setSending(true);
@@ -42,6 +46,7 @@ export const Contact = () => {
         body: JSON.stringify({
           email: email.value,
           message: message.value,
+          recaptcha: recaptchaValue,
         }),
       });
 
@@ -61,6 +66,9 @@ export const Contact = () => {
       setSending(false);
       setStatusError(error.message);
     }
+
+    // Сбросьте значение reCAPTCHA после отправки формы
+    setRecaptchaValue(null);
   };
 
   return (
@@ -108,6 +116,12 @@ export const Contact = () => {
               maxLength={4096}
               {...message}
             />
+            <div className={styles.recaptcha}>
+              <ReCAPTCHA
+                sitekey={process.env.NEXT_PUBLIC_RECAPTCHA_SITE_KEY}
+                onChange={value => setRecaptchaValue(value)}
+              />
+            </div>
             <Transition in={statusError} timeout={msToNum(tokens.base.durationM)}>
               {errorStatus => (
                 <div
@@ -131,7 +145,7 @@ export const Contact = () => {
               data-status={status}
               data-sending={sending}
               style={getDelay(tokens.base.durationM, initDelay)}
-              disabled={sending}
+              disabled={sending || !recaptchaValue} // Отключите кнопку, если reCAPTCHA не прошла
               loading={sending}
               loadingText="Отправляю..."
               icon="send"
