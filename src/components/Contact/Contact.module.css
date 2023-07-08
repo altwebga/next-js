@@ -303,3 +303,11 @@
     animation: fadeIn var(--durationL) ease var(--durationXL) forwards;
   }
 }
+
+.linkContact {
+  display: flex;
+  gap: 20px;
+}
+.navIconLinkContact {
+  color: rgb(var(--rgbPrimary));
+}

@@ -15,6 +15,8 @@ import { useRef, useState } from 'react';
 import { cssProps, msToNum, numToMs } from 'utils/style';
 import { useGoogleReCaptcha } from 'react-google-recaptcha-v3';
 import styles from './Contact.module.css';
+import { ServicesSectionText } from 'layouts/Services';
+import { socialLinks } from 'components/Navbar/navData';
 
 export const Contact = () => {
   const errorRef = useRef();
@@ -85,6 +87,21 @@ export const Contact = () => {
             >
               <DecoderText text="Напишите мне" start={status !== 'exited'} delay={300} />
             </Heading>
+            <ServicesSectionText className={styles.linkContact}>
+              Я в соцсетях:
+              {socialLinks.map(({ label, url, icon }) => (
+                <a
+                  key={label}
+                  className={styles.navIconLinkContact}
+                  aria-label={label}
+                  href={url}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon className={styles.navIconContact} icon={icon} />
+                </a>
+              ))}
+            </ServicesSectionText>
             <Divider
               className={styles.divider}
               data-status={status}
@@ -180,6 +197,7 @@ export const Contact = () => {
           </div>
         )}
       </Transition>
+
       <Footer className={styles.footer} />
     </Section>
   );
