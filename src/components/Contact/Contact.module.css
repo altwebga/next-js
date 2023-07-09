@@ -307,6 +307,14 @@
 .linkContact {
   display: flex;
   gap: 20px;
+  transition-property: opacity;
+  transition-timing-function: var(--bezierFastoutSlowin);
+  transition-duration: var(--durationXL);
+  transition-delay: var(--delay);
+  opacity: 0;
+  &:global {
+    animation: fadeIn var(--durationL) ease var(--durationXL) forwards;
+  }
 }
 .navIconLinkContact {
   color: rgb(var(--rgbPrimary));

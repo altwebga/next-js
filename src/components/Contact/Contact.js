@@ -85,9 +85,12 @@ export const Contact = () => {
               as="h1"
               style={getDelay(tokens.base.durationXS, initDelay, 0.3)}
             >
-              <DecoderText text="Напишите мне" start={status !== 'exited'} delay={300} />
+              <DecoderText text="Напишите мне" />
             </Heading>
-            <ServicesSectionText className={styles.linkContact}>
+            <ServicesSectionText
+              className={styles.linkContact}
+              style={getDelay(tokens.base.durationM, initDelay)}
+            >
               Я в соцсетях:
               {socialLinks.map(({ label, url, icon }) => (
                 <a
