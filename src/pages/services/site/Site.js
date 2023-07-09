@@ -1,6 +1,6 @@
-import siteAnnotationLarge from 'assets/site-img/site-annotation-large.webp';
+import siteAnnotationLarge from 'assets/site-img/site-annotation-large.png';
 import siteAnnotationPlaceholder from 'assets/site-img/site-annotation-placeholder.webp';
-import siteAnnotation from 'assets/site-img/site-annotation.webp';
+import siteAnnotation from 'assets/site-img/site-annotation.png';
 import siteBackgroundBarLarge from 'assets/site-img/site-background-bar-large.webp';
 import siteBackgroundBarPlaceholder from 'assets/site-img/site-background-bar-placeholder.webp';
 import siteBackgroundBar from 'assets/site-img/site-background-bar.webp';
@@ -33,10 +33,11 @@ import {
 import { Fragment } from 'react';
 import { media } from 'utils/style';
 import styles from './Site.module.css';
+import { Button } from 'components/Button';
 
 const title = 'Разработка сайтов';
 const description =
-  'Четкий и отлаженный процесс разработки от прототипа до готового сайта с заказами.';
+  'Сделаю современный сайт с высокой конверсией под ключ для вашего бизнеса. Возможно как готовое решение стилизованное под Вас, так и идивидуальная разработка с нуля.';
 const roles = ['SPA', 'MPA', 'Landing Page', 'E-Commerce'];
 
 export const ServiceSite = () => {
@@ -59,16 +60,14 @@ export const ServiceSite = () => {
         <ServicesSection>
           <ServicesSectionColumns centered className={styles.columns}>
             <div className={styles.imagesText}>
-              <ServicesSectionHeading>1. Разработка дизайна</ServicesSectionHeading>
+              <ServicesSectionHeading>
+                Планирование и проектирование
+              </ServicesSectionHeading>
               <ServicesSectionText>
-                Разработка айдентики, прототипирование и разработка дизайн‑макета сайта
-                (UI/UX) Разработка дизайна сайта осуществляется по техзаданию, упрощенному
-                брифу или по примерам действующих сайтов. Описывается структура, внешний
-                вид и задачи, которые должен решать сайт. т.д.
-              </ServicesSectionText>
-              <ServicesSectionText>
-                Результатом являются графические макеты страниц будущего сайта: главной,
-                внутренней, мобильных версий и
+                На этом этапе мы обсудим все ваши требования и ожидания от сайта, его
+                структуру, функционал, целевую аудиторию и ключевые бизнес-цели. Исходя из
+                этих данных, я разработаю подробный план и создам первоначальный дизайн
+                сайта.
               </ServicesSectionText>
             </div>
             <div className={styles.sidebarImages}>
@@ -92,16 +91,12 @@ export const ServiceSite = () => {
         <ServicesSection light>
           <ServicesSectionContent>
             <ServicesTextRow>
-              <ServicesSectionHeading>
-                2. Разработка фронтенда и бэкенда
-              </ServicesSectionHeading>
+              <ServicesSectionHeading>Разработка</ServicesSectionHeading>
               <ServicesSectionText>
-                HTML‑вёрстка, разработка функционала, запуск и тестирование сайта Сложный
-                процесс, превращающий картинку в живой интерфейс с набором необходимых
-                функций и системой управления. Чтобы сайтом было удобно пользоваться на
-                любых устройствах, применяется кроссбраузерная адаптивная вёрстка.
-                Разработка бэкенда осуществляется согласно документации выбранной CMS или
-                пишется с нуля.
+                На этом этапе осуществляется программная реализация сайта. Я начинаю
+                преобразовывать концепцию и дизайн сайта в полностью функциональный
+                продукт, при этом постоянно общаясь с вами, чтобы убедиться, что все
+                соответствует вашим ожиданиям.
               </ServicesSectionText>
             </ServicesTextRow>
             <Image
@@ -134,14 +129,29 @@ export const ServiceSite = () => {
               </div>
             </div>
             <div className={styles.gridText}>
-              <ServicesSectionHeading>3. Наполнение и оптимизация</ServicesSectionHeading>
+              <ServicesSectionHeading>Тестирование и Запуск</ServicesSectionHeading>
               <ServicesSectionText>
-                Копирайтинг, наполнение, вёрстка контента, поисковая оптимизация Кроме
-                стандартной вёрстки контента, каждый новый сайт должен пройти стартовую
-                поисковую оптимизацию (SEO), чтобы он был лучше виден поисковыми системами
-                и был более релевантен запросам пользователей.
+                После завершения разработки, я проведу комплексное тестирование сайта,
+                чтобы убедиться в его безупречной работе на всех платформах и устройствах.
+                Когда все тесты будут успешно пройдены, я запущу ваш сайт, чтобы он начал
+                работу и привлекал к вам новых клиентов.
               </ServicesSectionText>
             </div>
+          </ServicesSectionContent>
+        </ServicesSection>
+        <ServicesSection light>
+          <ServicesSectionContent>
+            <ServicesTextRow>
+              <ServicesSectionText>
+                Со мной вам не придется беспокоиться о технических аспектах проекта. Я
+                предлагаю полный комплекс услуг, начиная от планирования и разработки,
+                заканчивая поддержкой после запуска. Свяжитесь со мной, чтобы обсудить
+                ваши потребности и начать создание вашего нового сайта сегодня!
+              </ServicesSectionText>
+              <Button secondary className={styles.button} href="/contact" icon="send">
+                Напишите мне
+              </Button>
+            </ServicesTextRow>
           </ServicesSectionContent>
         </ServicesSection>
       </ServicesContainer>
