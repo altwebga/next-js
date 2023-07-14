@@ -1,6 +1,3 @@
-import mobileAnnotationLarge from 'assets/mobile-img/mobile-annotation-large.png';
-import mobileAnnotationPlaceholder from 'assets/mobile-img/mobile-annotation-placeholder.png';
-import mobileAnnotation from 'assets/mobile-img/mobile-annotation.png';
 import mobileBackgroundBarLarge from 'assets/mobile-img/mobile-background-bar-large.png';
 import mobileBackgroundBarPlaceholder from 'assets/mobile-img/mobile-background-bar-placeholder.jpg';
 import mobileBackgroundBar from 'assets/mobile-img/mobile-background-bar.png';
@@ -20,6 +17,7 @@ import { Footer } from 'components/Footer';
 import { Image } from 'components/Image';
 import { Meta } from 'components/Meta';
 import { Link } from 'components/Link';
+import { Button } from 'components/Button';
 import {
   ServicesBackground,
   ServicesContainer,
@@ -180,21 +178,15 @@ export const serviceMobile = () => {
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
                 />
               </div>
-              <div className={styles.gridForeground}>
-                <Image
-                  srcSet={[mobileAnnotation, mobileAnnotationLarge]}
-                  placeholder={mobileAnnotationPlaceholder}
-                  alt="Запус мобильного приложения"
-                  sizes={`(max-width: ${media.mobile}px) 584px, (max-width: ${media.tablet}px) 747px, 556px`}
-                />
-              </div>
             </div>
             <div className={styles.gridText}>
-              <ServicesSectionHeading>Варианты сотрудничества.</ServicesSectionHeading>
+              <ServicesSectionHeading>
+                Варианты сотрудничества и цены.
+              </ServicesSectionHeading>
               <ServicesSectionText>
                 Разработка мобильных приложений очень непростая задача, именно поэтому
-                цены на разработку у адекватных разработчиков стартуют от 500k, со сроками
-                3-4 месяца.
+                цены на разработку у адекватных разработчиков стартуют от 200k, со сроками
+                3-4 месяца, а у студий от 500k, за счет прочих расходов.
               </ServicesSectionText>
               <ServicesSectionText>
                 Моих знаний и опыта достаточно для полного цикла разработки небольшого
@@ -206,7 +198,9 @@ export const serviceMobile = () => {
                 Давайте вместе создадим потрясающее мобильное приложение!
               </ServicesSectionText>
               <ServicesSectionText>
-                <Link href="/contact">Начать сотрудничество</Link>
+                <Button secondary className={styles.button} href="/contact" icon="send">
+                  Напишите мне
+                </Button>
               </ServicesSectionText>
             </div>
           </ServicesSectionContent>
