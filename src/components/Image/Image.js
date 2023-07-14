@@ -3,7 +3,7 @@ import { Icon } from 'components/Icon';
 import { useTheme } from 'components/ThemeProvider';
 import { useReducedMotion } from 'framer-motion';
 import { useHasMounted, useInViewport } from 'hooks';
-import { Fragment, useCallback, useEffect, useRef, useState } from 'react';
+import { useCallback, useEffect, useRef, useState } from 'react';
 import { resolveSrcFromSrcSet, srcSetToString } from 'utils/image';
 import { classes, cssProps, numToMs } from 'utils/style';
 import styles from './Image.module.css';
@@ -147,7 +147,7 @@ const ImageElements = ({
       style={cssProps({ delay: numToMs(delay + 1000) })}
     >
       {isVideo && hasMounted && (
-        <Fragment>
+        <>
           <video
             muted
             loop
@@ -168,7 +168,7 @@ const ImageElements = ({
               {playing ? 'Pause' : 'Play'}
             </Button>
           )}
-        </Fragment>
+        </>
       )}
       {!isVideo && (
         <img

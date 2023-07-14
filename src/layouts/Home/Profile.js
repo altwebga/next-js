@@ -3,22 +3,21 @@ import profileImgLarge from 'assets/profile-large.jpg';
 import profileImgPlaceholder from 'assets/profile-placeholder.jpg';
 import profileImg from 'assets/profile.jpg';
 import { Button } from 'components/Button';
-import { DecoderText } from 'components/DecoderText';
 import { Divider } from 'components/Divider';
 import { Heading } from 'components/Heading';
 import { Image } from 'components/Image';
 import { Section } from 'components/Section';
 import { Text } from 'components/Text';
 import { Transition } from 'components/Transition';
-import { Fragment, useState } from 'react';
+import { useState } from 'react';
 import { media } from 'utils/style';
 import { Link } from 'components/Link';
 import styles from './Profile.module.css';
 
 const ProfileText = ({ visible, titleId }) => (
-  <Fragment>
+  <>
     <Heading className={styles.title} data-visible={visible} level={3} id={titleId}>
-      <DecoderText text="Веб‑разработка — моя жизнь!" start={visible} delay={500} />
+      Веб‑разработка — моя жизнь!
     </Heading>
     <Text className={styles.description} data-visible={visible} size="l" as="p">
       Привет, меня зовут Константин. Стремительная популяризация интернета и нескончаемый
@@ -32,7 +31,7 @@ const ProfileText = ({ visible, titleId }) => (
       алгоритмы ранжирования поисковых систем. Подробнее о технологиях и оборудовании
       которое я использую посмотрите на странице <Link href="/uses">окружение</Link>.
     </Text>
-  </Fragment>
+  </>
 );
 
 export const Profile = ({ id, visible, sectionRef }) => {

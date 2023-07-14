@@ -1,4 +1,3 @@
-import { Fragment } from 'react';
 import { classes } from 'utils/style';
 import styles from './Heading.module.css';
 
@@ -15,7 +14,7 @@ export const Heading = ({
   const Component = as || `h${Math.max(clampedLevel, 1)}`;
 
   return (
-    <Fragment>
+    <>
       <Component
         className={classes(styles.heading, className)}
         data-align={align}
@@ -25,6 +24,6 @@ export const Heading = ({
       >
         {children}
       </Component>
-    </Fragment>
+    </>
   );
 };

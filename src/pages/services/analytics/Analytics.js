@@ -25,7 +25,6 @@ import {
   ServicesSectionText,
   ServicesTextRow,
 } from 'layouts/Services';
-import { Fragment } from 'react';
 import { media } from 'utils/style';
 import styles from './Analytics.module.css';
 
@@ -36,7 +35,7 @@ const roles = ['Я.Метрика', 'Я.Директ', 'Roistat'];
 
 export const serviceAnalytics = () => {
   return (
-    <Fragment>
+    <>
       <Meta title={title} prefix="Услуги" description={description} />
       <ServicesContainer className={styles.analytics}>
         <ServicesBackground
@@ -161,6 +160,6 @@ export const serviceAnalytics = () => {
         </ServicesSection>
       </ServicesContainer>
       <Footer />
-    </Fragment>
+    </>
   );
 };

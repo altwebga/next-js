@@ -11,7 +11,7 @@ import styles from 'layouts/App/App.module.css';
 import { initialState, reducer } from 'layouts/App/reducer';
 import Head from 'next/head';
 import { useRouter } from 'next/router';
-import { Fragment, createContext, useEffect, useReducer } from 'react';
+import { createContext, useEffect, useReducer } from 'react';
 import { msToNum } from 'utils/style';
 import { ScrollRestore } from '../layouts/App/ScrollRestore';
 
@@ -42,7 +42,7 @@ const App = ({ Component, pageProps }) => {
     <AppContext.Provider value={{ ...state, dispatch }}>
       <ThemeProvider themeId={state.theme}>
         <LazyMotion features={domAnimation}>
-          <Fragment>
+          <>
             <Head>
               <link
                 rel="canonical"
@@ -78,7 +78,7 @@ const App = ({ Component, pageProps }) => {
                 </m.div>
               </AnimatePresence>
             </main>
-          </Fragment>
+          </>
         </LazyMotion>
       </ThemeProvider>
     </AppContext.Provider>

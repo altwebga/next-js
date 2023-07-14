@@ -29,7 +29,6 @@ import {
   ServicesSectionText,
   ServicesTextRow,
 } from 'layouts/Services';
-import { Fragment } from 'react';
 import { media } from 'utils/style';
 import styles from './Mobile.module.css';
 
@@ -40,7 +39,7 @@ const roles = ['React Native', 'Expo', 'Figma'];
 
 export const serviceMobile = () => {
   return (
-    <Fragment>
+    <>
       <Meta title={title} prefix="Услуги" description={description} />
       <ServicesContainer className={styles.mobile}>
         <ServicesBackground
@@ -207,6 +206,6 @@ export const serviceMobile = () => {
         </ServicesSection>
       </ServicesContainer>
       <Footer />
-    </Fragment>
+    </>
   );
 };

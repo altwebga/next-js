@@ -30,7 +30,6 @@ import {
   ServicesSectionText,
   ServicesTextRow,
 } from 'layouts/Services';
-import { Fragment } from 'react';
 import { media } from 'utils/style';
 import styles from './Site.module.css';
 import { Button } from 'components/Button';
@@ -42,7 +41,7 @@ const roles = ['SPA', 'MPA', 'Landing Page', 'E-Commerce'];
 
 export const ServiceSite = () => {
   return (
-    <Fragment>
+    <>
       <Meta title={title} prefix="Услуги" description={description} />
       <ServicesContainer className={styles.site}>
         <ServicesBackground
@@ -156,6 +155,6 @@ export const ServiceSite = () => {
         </ServicesSection>
       </ServicesContainer>
       <Footer />
-    </Fragment>
+    </>
   );
 };

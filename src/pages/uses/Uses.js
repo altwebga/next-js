@@ -15,12 +15,11 @@ import {
   ServicesSectionText,
   ServicesTextRow,
 } from 'layouts/Services';
-import { Fragment } from 'react';
 import styles from './Uses.module.css';
 
 export const Uses = () => {
   return (
-    <Fragment>
+    <>
       <Meta
         title="Окружение"
         description="Список оборудования и программного обеспечения, которое я использую для своей работы"
@@ -135,6 +134,6 @@ export const Uses = () => {
         </ServicesSection>
       </ServicesContainer>
       <Footer />
-    </Fragment>
+    </>
   );
 };
