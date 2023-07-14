@@ -43,7 +43,7 @@ const roles = ['SPA', 'MPA', 'Landing Page', 'E-Commerce'];
 export const ServiceSite = () => {
   return (
     <Fragment>
-      <Meta title={title} prefix="Services" description={description} />
+      <Meta title={title} prefix="Услуги" description={description} />
       <ServicesContainer className={styles.site}>
         <ServicesBackground
           src={siteBackground}
@@ -75,14 +75,14 @@ export const ServiceSite = () => {
                 className={styles.sidebarImage}
                 srcSet={[siteSidebarLayers, siteSidebarLayersLarge]}
                 placeholder={siteSidebarLayersPlaceholder}
-                alt="The layers sidebar design, now with user profiles."
+                alt="Планирование и проектирование"
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
               <Image
                 className={styles.sidebarImage}
                 srcSet={[siteSidebarAnnotations, siteSidebarAnnotationsLarge]}
                 placeholder={siteSidebarAnnotationsPlaceholder}
-                alt="Multiple user annotations on a shared layer."
+                alt="Планирование и проектирование"
                 sizes={`(max-width: ${media.mobile}px) 200px, 343px`}
               />
             </div>
@@ -102,7 +102,7 @@ export const ServiceSite = () => {
             <Image
               srcSet={[siteSlides, siteSlidesLarge]}
               placeholder={siteSlidesPlaceholder}
-              alt="The new My Slides tab in site, showing annotated and favorited slides."
+              alt="Разработка сайтов в Горно-Алтайске"
               sizes={`(max-width: ${media.mobile}px) 500px, (max-width: ${media.tablet}px) 800px, 1000px`}
             />
           </ServicesSectionContent>
@@ -114,7 +114,7 @@ export const ServiceSite = () => {
                 <Image
                   srcSet={[siteBackgroundBar, siteBackgroundBarLarge]}
                   placeholder={siteBackgroundBarPlaceholder}
-                  alt=""
+                  alt="Ракета, запуск сайта"
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
                 />
@@ -123,7 +123,7 @@ export const ServiceSite = () => {
                 <Image
                   srcSet={[siteAnnotation, siteAnnotationLarge]}
                   placeholder={siteAnnotationPlaceholder}
-                  alt="An annotation preview popover with statistics for shape perimeter and area."
+                  alt="Облако без фона"
                   sizes={`(max-width: ${media.mobile}px) 584px, (max-width: ${media.tablet}px) 747px, 556px`}
                 />
               </div>

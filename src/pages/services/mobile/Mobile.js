@@ -43,7 +43,7 @@ const roles = ['React Native', 'Expo', 'Figma'];
 export const serviceMobile = () => {
   return (
     <Fragment>
-      <Meta title={title} prefix="Services" description={description} />
+      <Meta title={title} prefix="Услуги" description={description} />
       <ServicesContainer className={styles.mobile}>
         <ServicesBackground
           src={mobileBackground}
@@ -175,7 +175,7 @@ export const serviceMobile = () => {
                 <Image
                   srcSet={[mobileBackgroundBar, mobileBackgroundBarLarge]}
                   placeholder={mobileBackgroundBarPlaceholder}
-                  alt=""
+                  alt="Мобильное приложение"
                   role="presentation"
                   sizes={`(max-width: ${media.mobile}px) 312px, (max-width: ${media.tablet}px) 408px, 514px`}
                 />
@@ -184,7 +184,7 @@ export const serviceMobile = () => {
                 <Image
                   srcSet={[mobileAnnotation, mobileAnnotationLarge]}
                   placeholder={mobileAnnotationPlaceholder}
-                  alt="An annotation preview popover with statistics for shape perimeter and area."
+                  alt="Запус мобильного приложения"
                   sizes={`(max-width: ${media.mobile}px) 584px, (max-width: ${media.tablet}px) 747px, 556px`}
                 />
               </div>

@@ -60,7 +60,7 @@ const PortfolioPost = ({
             play={!reduceMotion ? hovered : undefined}
             src={{ src: banner }}
             placeholder={{ src: `${banner.split('.')[0]}-placeholder.jpg` }}
-            alt=""
+            alt="Фоновое изображение портфолио"
             role="presentation"
           />
         </div>

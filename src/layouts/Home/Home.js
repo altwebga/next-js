@@ -69,7 +69,7 @@ export const Home = () => {
     <div className={styles.home}>
       <Meta
         title="Дизан + Разработка"
-        description="Портфолио Frontend-разработчика Кузнецова Константина - разработка web и мобильных приложений под ключ."
+        description="Портфолио Frontend-разработчика Кузнецова Константина - разработка web и мобильных приложений под ключ в Горно-Алтайске"
       />
       <Intro
         id="intro"

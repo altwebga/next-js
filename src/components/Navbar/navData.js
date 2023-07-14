@@ -4,7 +4,7 @@ export const navLinks = [
     pathname: '/#services-1',
   },
   {
-    label: 'Обо мне',
+    label: 'Обо_мне',
     pathname: '/#details',
   },
   {

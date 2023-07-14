@@ -37,7 +37,7 @@ const roles = ['Я.Метрика', 'Я.Директ', 'Roistat'];
 export const serviceAnalytics = () => {
   return (
     <Fragment>
-      <Meta title={title} prefix="Services" description={description} />
+      <Meta title={title} prefix="Услуги" description={description} />
       <ServicesContainer className={styles.analytics}>
         <ServicesBackground
           src={analyticsBackground}
@@ -56,7 +56,7 @@ export const serviceAnalytics = () => {
             <ServicesImage
               srcSet={[analyticsApp, analyticsAppLarge]}
               placeholder={analyticsAppPlaceholder}
-              alt="The Slice web application showing a selected user annotation."
+              alt="Яндекс метрика. Услуги настройки и аналитики."
               sizes={`(max-width: ${media.mobile}px) 100vw, (max-width: ${media.tablet}px) 90vw, 80vw`}
             />
           </ServicesSectionContent>
